@@ -1,7 +1,7 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 
-const useStylesLanding = makeStyles(theme => ({
+const useStylesBio = makeStyles(theme => ({
   root: {
     ... theme.page,
     backgroundColor: 'orange'
@@ -9,10 +9,10 @@ const useStylesLanding = makeStyles(theme => ({
 }))
 
 const Bio = () => {
-  const classes = useStylesLanding()
+  const classes = useStylesBio()
 
   return(
-    <div className = { classes.root }>Bio page</div>
+    <div className = { classes.root } id='bio'>Bio page</div>
   )
 }
 

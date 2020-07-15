@@ -12,7 +12,7 @@ const Landing = () => {
   const classes = useStylesLanding()
 
   return(
-    <div className = { classes.root }>Landing world</div>
+    <div className = { classes.root } id='landing'>Landing world</div>
   )
 }
 
