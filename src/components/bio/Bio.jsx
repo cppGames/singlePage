@@ -4,16 +4,16 @@ import { makeStyles } from '@material-ui/core/styles'
 const useStylesLanding = makeStyles(theme => ({
   root: {
     ... theme.page,
-    backgroundColor: 'red'
+    backgroundColor: 'orange'
   }
 }))
 
-const Landing = () => {
+const Bio = () => {
   const classes = useStylesLanding()
 
   return(
-    <div className = { classes.root }>Landing world</div>
+    <div className = { classes.root }>Bio page</div>
   )
 }
 
-export default Landing
+export default Bio

@@ -2,6 +2,9 @@ import { createMuiTheme }  from '@material-ui/core/styles'
 
 const theme = createMuiTheme({
   spacing: 8,
+  page: {
+    minHeight: '100vh',
+  },
   palette: {
     primary: {
       light: '#757ce8',
