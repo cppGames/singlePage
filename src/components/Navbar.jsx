@@ -12,6 +12,9 @@ const useStylesNavbar = makeStyles(theme => ({
     display: 'inline',
     zIndex: 1,
   },
+  logo: {
+    border: '1px solid rgb(154, 157, 203)'
+  },
   link: {
     '&:hover': {
       borderBottom: '1px solid #333'
@@ -25,8 +28,15 @@ const useStylesNavbar = makeStyles(theme => ({
 const Navbar = () => {
   const classes = useStylesNavbar()
 
+  function refreshPage() {
+    window.location.reload(false)
+  }
+
   return(
     <div className = { classes.root }>
+      <a onClick={ refreshPage } className={ [classes.logo, classes.link].join(' ') }>
+        LOGO
+      </a>
       <Link
         activeClass='active-link'
         to='landing'
