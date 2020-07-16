@@ -14,16 +14,20 @@ import Portfolio from './components/portfolio/Portfolio'
 
 const App = () => {
   AOS.init()
+
   return(
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <Navbar />
-      <Landing />
-      <Bio/>
-      <div data-aos='fade-left'>
-        <Portfolio />
-      </div>
-    </ThemeProvider>
+    // hotfix aos animation
+    <div style={ {overflowX: 'hidden'} }>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <Navbar />
+        <Landing />
+        <Bio/>
+        <div data-aos='fade-left'>
+          <Portfolio />
+        </div>
+      </ThemeProvider>
+    </div>
   )
 }
 
