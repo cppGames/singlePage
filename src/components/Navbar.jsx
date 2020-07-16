@@ -10,6 +10,7 @@ const useStylesNavbar = makeStyles(theme => ({
     fontSize: '2em',
     paddingRight: 20,
     display: 'inline',
+    zIndex: 1,
   },
   link: {
     '&:hover': {

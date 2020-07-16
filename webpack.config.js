@@ -1,8 +1,8 @@
-const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: "./src/index.jsx",
+  entry: './src/index.jsx',
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
     compress: true,
@@ -16,24 +16,24 @@ module.exports = {
     extensions: ['.js', '.jsx'],
   },
   output: {
-    path: path.join(__dirname, "/dist"),
-    filename: "index-bundle.js"
+    path: path.join(__dirname, '/dist'),
+    filename: 'index-bundle.js'
   },
   module: {
     rules: [
       {
         test: /\.js$|\.jsx$/,
         exclude: /node_modules/,
-        use: ["babel-loader"]
+        use: ['babel-loader']
       },
       {
         // npm install css-loader style-loader --save-dev
         test: /\.css$/,
-        use: ["style-loader", "css-loader"]
+        use: ['style-loader', 'css-loader']
       },
       {
         // npm install file-loader --save-dev
-        test: /\.(png|jpe?g|gif)$/i,
+        test: /\.(png|mp4$|jpe?g|gif)$/i,
         use: [{ loader: 'file-loader' }],
       }
     ]
@@ -41,7 +41,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       // npm install html-webpack-plugin --save-dev
-      template: "./public/index.html"
+      template: './public/index.html'
     })
   ]
 };

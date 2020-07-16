@@ -1,4 +1,5 @@
 .DS_STORE
+resource/
 *.code-workspace
 node_modules
 scripts/flow/*/.flowconfig
