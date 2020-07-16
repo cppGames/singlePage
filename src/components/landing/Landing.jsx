@@ -25,9 +25,6 @@ const useStylesLanding = makeStyles(theme => ({
     width: '100%',
     height: '100%',
     pointerEvents: 'none',
-    // backgroundPosition: 'top',
-    // backgroundSize: 'cover',
-    // backgroundRepeat: 'no-repeat',
   }
 }))
 
