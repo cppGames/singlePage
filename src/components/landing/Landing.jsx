@@ -1,7 +1,6 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import VideoSource from '../../../resource/video/work.mp4'
-import Cover from '../../Cover'
 
 const useStylesLanding = makeStyles(theme => ({
   root: {
