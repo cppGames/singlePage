@@ -1,18 +1,32 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import VideoSource from '../../../resource/video/work.mp4'
+import Cover from '../../Cover'
 
 const useStylesLanding = makeStyles(theme => ({
   root: {
     ... theme.page,
-    backgroundColor: 'red'
+    backgroundColor: 'red',
+  },
+  banner: {
+    width: '100%',
+    height: '100vh',
+    overflow: 'hidden',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    zIndex: 0,
   },
   video: {
-    minHeight: '80vh',
-    backgroundPosition: 'top',
-    backgroundSize: 'cover',
-    backgroundRepeat: 'no-repeat',
-    zIndex: 0
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    objectFit: 'cover',
+    width: '100%',
+    height: '100%'
+    // backgroundPosition: 'top',
+    // backgroundSize: 'cover',
+    // backgroundRepeat: 'no-repeat',
   }
 }))
 
@@ -21,10 +35,12 @@ const Landing = () => {
 
   return(
     <div className = { classes.root } id='landing'>
-      <video autoPlay='autoplay' loop='loop' muted className={classes.video}>
-        <source src={VideoSource} type='video/mp4'></source>
-        Your browser doesn`t support video tag
-      </video>
+      <div className = { classes.banner }>
+        <video autoPlay loop muted className={classes.video}>
+          <source src={VideoSource} type='video/mp4'></source>
+          Your browser doesn`t support video tag
+        </video>
+      </div>
     </div>
   )
 }
