@@ -23,7 +23,8 @@ const useStylesLanding = makeStyles(theme => ({
     left: 0,
     objectFit: 'cover',
     width: '100%',
-    height: '100%'
+    height: '100%',
+    pointerEvents: 'none',
     // backgroundPosition: 'top',
     // backgroundSize: 'cover',
     // backgroundRepeat: 'no-repeat',
