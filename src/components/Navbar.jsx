@@ -10,7 +10,7 @@ const useStylesNavbar = makeStyles(theme => ({
     fontSize: '2em',
     paddingRight: 20,
     display: 'inline',
-    zIndex: 1,
+    zIndex: 5,
   },
   logo: {
     border: '1px solid rgb(154, 157, 203)'

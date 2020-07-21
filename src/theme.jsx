@@ -5,6 +5,20 @@ const theme = createMuiTheme({
   page: {
     minHeight: '100vh',
   },
+  content: {
+    minHeight: '100vh',
+    position: "relative",
+    zIndex: 1,
+  },
+  backg: {
+    left: 0,
+    zIndex: 0,
+    position: 'absolute',
+    backgroundPosition: 'top',
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+    backgroundAttachment: 'fixed',
+  },
   palette: {
     primary: {
       light: '#757ce8',
