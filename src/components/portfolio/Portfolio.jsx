@@ -1,6 +1,7 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import PortfolioSection from './PortfolioSection'
+import { projects } from './projects'
 import { 
   Box,
   Grid,
@@ -18,14 +19,6 @@ const useStylesPortfolio = makeStyles(theme => ({
 
 const Portfolio = () => {
   const classes = useStylesPortfolio()
-  const projects = [{
-    name: 'Alert manager',
-    description: 'Save the world'
-  }, {
-    name: 'New manager',
-    description: 'Update the world'
-  },
-]
 
   return(
     <div className={ classes.root }>
