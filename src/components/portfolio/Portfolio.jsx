@@ -36,6 +36,7 @@ const Portfolio = () => {
         container
         direction='column'
         justify='center'
+        spacing={2}
       >
         {
           projects.map( (project, i) => (
