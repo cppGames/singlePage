@@ -30,7 +30,9 @@ const Portfolio = () => {
   return(
     <div className={ classes.root }>
       <Typography variant='h1' component='h1' gutterBottom>
+        <Box color='green'>
           Pf
+        </Box>
       </Typography>
       <Grid 
         container
@@ -41,8 +43,8 @@ const Portfolio = () => {
         {
           projects.map( (project, i) => (
           <Grid container item  direction='row' justify={(i % 2 == 0) ? 'flex-end' : 'flex-start'}>
-            <Grid item lg={8} md={5} sm={3} >
-              <PortfolioSection />
+            <Grid item lg={8} md={7} sm={6} xs={12}>
+              <PortfolioSection num={++i} name={project.name} descr={project.description} />
             </Grid>
           </Grid>
           ))
