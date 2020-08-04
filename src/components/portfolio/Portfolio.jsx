@@ -42,7 +42,7 @@ const Portfolio = () => {
       >
         {
           projects.map( (project, i) => (
-          <Grid container item  direction='row' justify={(i % 2 == 0) ? 'flex-end' : 'flex-start'}>
+          <Grid container item key={i} direction='row' justify={(i % 2 == 0) ? 'flex-end' : 'flex-start'}>
             <Grid item lg={8} md={7} sm={6} xs={12}>
               <PortfolioSection num={++i} name={project.name} descr={project.description} />
             </Grid>
