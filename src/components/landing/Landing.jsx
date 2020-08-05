@@ -26,12 +26,12 @@ const Landing = () => {
       container
       direction='row-reverse'
     >
-      <Grid container item  alignItems='flex-end' justify='flex-end' lg={6} sm={12}>
+      <Grid container item  alignItems='flex-end' justify='flex-end' lg={6} md={6} sm={12}>
         <Grid item>
           <img className={classes.img} alt='complex' src={PhotoImage} />
         </Grid>
       </Grid>
-      <Grid container item justify='center' direction='column' lg={6} sm={12}>
+      <Grid container item justify='center' direction='column' lg={6} md={6} sm={12}>
         <Grid item>
           <Typography variant='h1' component='h1' gutterBottom>
             <Box color='grey'>
@@ -40,8 +40,8 @@ const Landing = () => {
           </Typography>
         </Grid>
         <Grid item>
-          <Typography variant='body' component='p'>
-            Web Developer, Visual designer, Photographer
+          <Typography variant='body2' component='p'>
+            Web Developer, Visual designer, Photographer <br/>
             located in Russia, looking for working around the globeocated in Russia, looking for working around the globe
           </Typography>
         </Grid>
