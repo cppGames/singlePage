@@ -11,7 +11,8 @@ import Navbar from './components/Navbar'
 import Landing from './components/landing/Landing'
 import Portfolio from './components/portfolio/Portfolio'
 import { makeStyles } from '@material-ui/core/styles'
-import PortfolioBackground from '../resource/img/portfolioBackground.jpg'
+import LandingBackground from '../resource/img/landingBackground.png'
+import PortfolioBackground from '../resource/img/portfolioBackground.png'
 import BioBackground from '../resource/img/bioBackground.jpg'
 
 const useStylesApp = makeStyles(theme => ({
@@ -27,7 +28,7 @@ const useStylesApp = makeStyles(theme => ({
     width: '100%',
     height: 1000,
     top: 0,
-    backgroundImage: `url('${ PortfolioBackground }')`
+    backgroundImage: `url('${ LandingBackground }')`
   },
   bioStyle: {
     left: 0,
