@@ -50,17 +50,6 @@ const Navbar = () => {
       </Link>
       <Link
         activeClass='active-link'
-        to='bio'
-        spy={true}
-        smooth={true}
-        offset={0}
-        duration= {500}
-        className = { classes.link }
-      >
-        Bio
-      </Link>
-      <Link
-        activeClass='active-link'
         to='portfolio'
         spy={true}
         smooth={true}
@@ -69,6 +58,17 @@ const Navbar = () => {
         className = { classes.link }
       >
         Portfolio
+      </Link>
+      <Link
+        activeClass='active-link'
+        to='bio'
+        spy={true}
+        smooth={true}
+        offset={0}
+        duration= {500}
+        className = { classes.link }
+      >
+        Bio
       </Link>
     </div>
   )
