@@ -17,9 +17,7 @@ const Bio = () => {
   return(
     <div className={ classes.root }>
       <Typography variant="h1" component="h1" gutterBottom>
-        <Box color='#ffff'>
           Artem Tikhomirov page 
-        </Box>
       </Typography>
     </div>
   )
