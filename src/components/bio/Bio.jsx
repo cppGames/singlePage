@@ -4,6 +4,7 @@ import {
   Box,
   Typography,
 } from '@material-ui/core'
+import BioCarousel from './BioCarousel'
 
 const useStylesBio = makeStyles(theme => ({
   root: {
@@ -17,8 +18,10 @@ const Bio = () => {
   return(
     <div className={ classes.root }>
       <Typography variant="h1" component="h1" gutterBottom>
-          Artem Tikhomirov page 
+          {/* Artem Tikhomirov page  */}
+          AT page
       </Typography>
+      <BioCarousel />
     </div>
   )
 }

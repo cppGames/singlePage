@@ -10,6 +10,7 @@ import Bio from './components/bio/Bio'
 import Navbar from './components/Navbar'
 import Landing from './components/landing/Landing'
 import Portfolio from './components/portfolio/Portfolio'
+import Lets from './components/callToAction/Lets'
 import { makeStyles } from '@material-ui/core/styles'
 import LandingBackground from '../resource/img/landingBackground.png'
 import PortfolioBackground from '../resource/img/portfolioBackground.png'
@@ -54,7 +55,7 @@ const useStylesApp = makeStyles(theme => ({
     backgroundAttachment: 'fixed',
     ////////////
     width: '100%',
-    height: 1000,
+    height: 1300,
     top: 2000,
     backgroundImage: `url('${ BioBackground }')`
   },
@@ -81,6 +82,7 @@ const App = () => {
         <Portfolio />
         <div className={ classes.bioStyle } id='bio' data-aos='fade-up' data-aos-offset='200' />
         <Bio/>
+        <Lets/>
       </ThemeProvider>
     </div>
   )

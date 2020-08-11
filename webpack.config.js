@@ -35,6 +35,14 @@ module.exports = {
         // npm install file-loader --save-dev
         test: /\.(png|mp4$|jpe?g|gif)$/i,
         use: [{ loader: 'file-loader' }],
+      },
+      {
+        test: /\.svg$/,
+        use: ['svg-loader']
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|svg)$/,
+        use: ['url-loader?limit=100000']
       }
     ]
   },

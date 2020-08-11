@@ -7,7 +7,7 @@ const theme = createMuiTheme({
   },
   content: {
     minHeight: '100vh',
-    position: "relative",
+    position: 'relative',
     zIndex: 1,
   },
   backg: {
