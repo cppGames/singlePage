@@ -42,6 +42,22 @@ function SampleNextArrow(props) {
   )
 }
 
+function SampleDots(props) {
+  const classes = useStyles()
+  const { dots } = props
+  return (
+      <div
+        style={{
+          backgroundColor: "#ddd",
+          borderRadius: "10px",
+          padding: "10px"
+        }}
+      >
+        <ul style={{ margin: "0px", color: 'brown' }}> {dots} </ul>
+      </div>
+  )
+}
+
 function SamplePrevArrow(props) {
   const classes = useStyles()
   const { className, style, onClick } = props
@@ -64,8 +80,9 @@ const BioCarousel = () => {
     autoplay: true,
     autoplaySpeed: 3500,
     pauseOnHover: true,
+    appendDots: dots => (<SampleDots dots={dots}/>),
     nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />
+    prevArrow: <SamplePrevArrow />,
   })
   
   return (
