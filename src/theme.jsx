@@ -6,6 +6,7 @@ const theme = createMuiTheme({
     minHeight: '100vh',
   },
   content: {
+    padding: '40px',
     minHeight: '100vh',
     position: 'relative',
     zIndex: 1,

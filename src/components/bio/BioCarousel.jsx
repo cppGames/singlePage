@@ -16,21 +16,22 @@ const useStyles = makeStyles(theme => ({
   rightArrow: {right: '0px',},
   leftArrow: {left: '0px',},
   carouselContainer: {
-    maxWidth: '100vw',
+    // maxWidth: '100vw',
     width: '100%',
-    overflow: 'hidden'
+    overflow: 'hidden',
+    maxWidth:'1400px'
   }
 }))
 
 const photos = [{
   name: 'Photo 1',
-  url: 'https://images.unsplash.com/photo-1597003509999-8575eecc6846?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60'
+  url: 'https://images.pexels.com/photos/1154739/pexels-photo-1154739.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
 },{
   name: 'Photo 2',
   url: 'https://images.unsplash.com/photo-1597011769841-bcb58aae661b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60'
 },{
   name: 'Photo 3',
-  url: 'https://images.unsplash.com/photo-1596930238982-b4e2795f0130?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60'
+  url: 'https://images.pexels.com/photos/3374066/pexels-photo-3374066.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
 },]
 
 
