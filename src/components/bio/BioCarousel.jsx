@@ -13,8 +13,15 @@ const useStyles = makeStyles(theme => ({
     top: '50%',
     cursor: 'pointer',
   },
-  rightArrow: {right: '0px',},
-  leftArrow: {left: '0px',},
+  arrowBackground: {
+    backgroundColor: "#ffffffbf",
+    borderRadius: "50px",
+    width: '35px',
+    height: '35px',
+    padding: '5px',
+  },
+  rightArrow: {right: '24px',},
+  leftArrow: {left: '24px',},
   carouselContainer: {
     // maxWidth: '100vw',
     width: '100%',
@@ -39,11 +46,16 @@ function SampleNextArrow(props) {
   const classes = useStyles()
   const { className, style, onClick } = props
   return (
-    <ArrowForwardIosRoundedIcon 
-      fontSize='large'
-      onClick={onClick}
-      className={`${classes.sliderArrow} ${classes.rightArrow}`}
-    />
+    <div className={`
+      ${classes.sliderArrow}
+      ${classes.rightArrow}
+      ${classes.arrowBackground}
+    `}>
+      <ArrowForwardIosRoundedIcon 
+        fontSize='medium'
+        onClick={onClick}
+      />
+    </div>
   )
 }
 
@@ -53,7 +65,7 @@ function SampleDots(props) {
   return (
       <div
         style={{
-          backgroundColor: "#ddd",
+          // backgroundColor: "#ddd",
           borderRadius: "10px",
           padding: "10px"
         }}
@@ -67,11 +79,17 @@ function SamplePrevArrow(props) {
   const classes = useStyles()
   const { className, style, onClick } = props
   return (
-    <ArrowBackIosRoundedIcon 
-      fontSize='large'
-      onClick={onClick}
-      className={`${classes.sliderArrow} ${classes.leftArrow}`}
-    />
+    <div className={`
+          ${classes.sliderArrow}
+          ${classes.leftArrow}
+          ${classes.arrowBackground}
+    `}>
+      <ArrowBackIosRoundedIcon 
+        fontSize='medium'
+        onClick={onClick}
+        
+      />
+    </div>
   )
 }
 
