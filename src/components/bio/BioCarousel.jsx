@@ -15,6 +15,11 @@ const useStyles = makeStyles(theme => ({
   },
   rightArrow: {right: '0px',},
   leftArrow: {left: '0px',},
+  carouselContainer: {
+    maxWidth: '100vw',
+    width: '100%',
+    overflow: 'hidden'
+  }
 }))
 
 const photos = [{
@@ -70,6 +75,7 @@ function SamplePrevArrow(props) {
 }
 
 const BioCarousel = () => {
+  const classes = useStyles()
   const [sliderSettings, setSliderSettings] = useState({
     dots: true,
     infinite: true,
@@ -85,21 +91,14 @@ const BioCarousel = () => {
   })
   
   return (
-    <div>
-      <h2> Single Item</h2>
-        <div style={ {
-          maxWidth: '100vw',
-          width: '100%',
-          overflow: 'hidden'
-        }}>
-          <Slider {...sliderSettings}>
-            { photos.map((photo) => (
-              <div key={photo.name}>
-                <img width='100%' src={photo.url} />
-              </div>
-            ))}
-        </Slider>
-      </div>
+      <div className={classes.carouselContainer}>
+        <Slider {...sliderSettings}>
+          { photos.map((photo) => (
+            <div key={photo.name}>
+              <img width='100%' src={photo.url} />
+            </div>
+          ))}
+      </Slider>
     </div>
   )
 }

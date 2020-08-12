@@ -6,7 +6,7 @@ import {
   Typography,
 } from '@material-ui/core'
 import BioCarousel from './BioCarousel'
-import { about } from './about'
+import { about, services, tools } from './about'
 
 const useStylesBio = makeStyles(theme => ({
   root: {
@@ -45,11 +45,21 @@ const Bio = () => {
           <Typography variant='h3'>
             DESIGN SERVICES
           </Typography>
+          { services.map((service) => (
+            <div key={ service }>
+              { service }
+            </div>
+          ))}
         </Grid>
         <Grid item xs={6}>
           <Typography variant='h3'>
             TOOLS I USE
           </Typography>
+          { tools.map((tool) => (
+            <div key={ tool }>
+            { tool }
+          </div>
+          ))}
         </Grid>
       </Grid>
     </Grid>
