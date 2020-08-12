@@ -6,7 +6,6 @@ import Slider from 'react-slick'
 import ArrowBackIosRoundedIcon from '@material-ui/icons/ArrowBackIosRounded'
 import ArrowForwardIosRoundedIcon from '@material-ui/icons/ArrowForwardIosRounded'
 
-
 const useStyles = makeStyles(theme => ({
   sliderArrow: {
     zIndex: 1,
@@ -14,8 +13,8 @@ const useStyles = makeStyles(theme => ({
     top: '50%',
     cursor: 'pointer',
   },
-  rightArrow: {right: '100px',},
-  leftArrow: {left: '100px',},
+  rightArrow: {right: '0px',},
+  leftArrow: {left: '0px',},
 }))
 
 const photos = [{
@@ -86,13 +85,17 @@ const BioCarousel = () => {
   })
   
   return (
-    <div style={{padding: '24px'}}>
+    <div>
       <h2> Single Item</h2>
-        <div>
+        <div style={ {
+          maxWidth: '100vw',
+          width: '100%',
+          overflow: 'hidden'
+        }}>
           <Slider {...sliderSettings}>
             { photos.map((photo) => (
               <div key={photo.name}>
-                <img width='30%' src={photo.url} />
+                <img width='100%' src={photo.url} />
               </div>
             ))}
         </Slider>
