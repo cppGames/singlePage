@@ -1,7 +1,7 @@
 import React , { useState } from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import 'slick-carousel/slick/slick.css'
-// import 'slick-carousel/slick/slick-theme.css'
+import 'slick-carousel/slick/slick-theme.css'
 import Slider from 'react-slick'
 import ArrowBackIosRoundedIcon from '@material-ui/icons/ArrowBackIosRounded'
 import ArrowForwardIosRoundedIcon from '@material-ui/icons/ArrowForwardIosRounded'
@@ -52,7 +52,6 @@ function SampleNextArrow(props) {
       ${classes.arrowBackground}
     `}>
       <ArrowForwardIosRoundedIcon 
-        fontSize='medium'
         onClick={onClick}
       />
     </div>
@@ -63,15 +62,16 @@ function SampleDots(props) {
   const classes = useStyles()
   const { dots } = props
   return (
-      <div
-        style={{
-          // backgroundColor: "#ddd",
-          borderRadius: "10px",
-          padding: "10px"
-        }}
-      >
-        <ul style={{ margin: "0px", color: 'brown' }}> {dots} </ul>
-      </div>
+    <div style={{ textAlign: 'center' }}>
+      <ul>
+      { dots.map((item, index) => (
+          <li key={index} style={{display: 'inline'}}>
+            {item.props.children}
+          </li>
+        ))
+      }
+      </ul>
+    </div>
   )
 }
 
@@ -85,9 +85,7 @@ function SamplePrevArrow(props) {
           ${classes.arrowBackground}
     `}>
       <ArrowBackIosRoundedIcon 
-        fontSize='medium'
         onClick={onClick}
-        
       />
     </div>
   )
