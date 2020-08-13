@@ -2,6 +2,7 @@ import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import PropTypes from 'prop-types'
 import { 
+  Box,
   Card,
   Typography,
   CardContent,
@@ -9,7 +10,8 @@ import {
 
 const useStylesPortfolioSection = makeStyles(theme => ({
   root: {
-
+    width: '670px',
+    height: '350px'
   },
   portFolioSection: {
   }
@@ -21,10 +23,12 @@ const PortfolioSection = (props) => {
   return(
     <Card className={classes.root}>
       <CardContent>
-        <Typography variant="h5" component="h2">
-          { num }. {name} 
+        <Typography variant="h5" component="h5" style={{maxWidth: '290px'}}>
+          <Box pt={3} pb={3}>
+            {name} 
+          </Box>
         </Typography>
-        <Typography variant="body2" component="p">
+        <Typography variant="body1" component="p">
           {descr}
         </Typography>
       </CardContent>

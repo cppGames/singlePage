@@ -1,5 +1,5 @@
 const projects = [{
-  name: 'Alert manager',
+  name: 'ALERT MANAGER',
   description: 'Разработан и реализован UI\UX дизайн центра управления оповещениями - Alert manager. \
   Alert manager Выполнен в виде приложения of Universal Machine Data Platform Splunk и используется \
   крупным оператором сотовой связи. Разработанный интерфейс позволяет с использованием дашборда быстро \
@@ -7,7 +7,7 @@ const projects = [{
   email or push уведомлений о сработавшем alert.',
   tool: 'Splunk Enterprise, Figma, Vue.JS, Vuex, Vue Router'
 }, {
-  name: 'Система мониторинга звонков call center',
+  name: 'СИСТЕМА МОНИТОРИНГА ЗВОНКОВ В CALL CENTER',
   description: 'Разработан и реализован UI\UX дизайн системы мониторинга отклонений звонков, поступающих \
   в call center. Реализованный интерфейс включает в себя несколько дашбордов, которые 24/7 контролируются \
   администраторами call center. Дашборды отображают ожидаемый прогноз звонков в call center, рассчитываемый \
@@ -16,7 +16,7 @@ const projects = [{
   используется в call center крупного банка',
   tool: 'Sketch, Adobe illustrator, React, Redux, React Router'
 }, {
-  name: 'Рекомендательная система для лечения онкологических заболеваний',
+  name: ' MEDEX - РЕКОМЕНДАТЕЛЬНАЯ СИСТЕМА ЛЕЧЕНИЯ ОНКОЛОГИЧЕСИХ ЗАБОЛЕВАНИЙ',
   description: 'Разработан и реализован UI\UX дизайн системы рекомендаций используемая докторами крупного \
   онкологический центра. Интерфейс системы позволяет быстро определить наиболее оптимальный тип лечения пациента.',
   tool: 'Figma, Adobe illustrator, React, Redux, React Router'
