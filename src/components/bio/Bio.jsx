@@ -20,8 +20,14 @@ const Bio = () => {
   return (
     <Grid
       className={ classes.root }
+      style={{
+        paddingTop: '450px',
+        paddingBottom: '250px'
+      }}
       container
       direction='column'
+      justify="center"
+      alignItems="center"
       spacing={10}
     >
       <Grid item>
@@ -36,7 +42,14 @@ const Bio = () => {
         </Typography>
       </Grid>
       <Grid item>
-        <Typography variant='body1'
+        <Typography variant='h3' align='center' color='primary'>
+          <Box fontWeight="fontWeightMedium">
+            Over 5 years of experience
+          </Box>
+        </Typography>
+      </Grid>
+      <Grid item>
+        <Typography variant='h5' 
           align='center' color='secondary'>
           { about }
         </Typography>
@@ -48,40 +61,45 @@ const Bio = () => {
         item
         container
         direction='row'
+        spacing={8}
       >
         <Grid item xs={6}>
           <Typography 
-            variant='h6'
-            component='h6'
+            variant='h5'
+            component='h5'
             gutterBottom
             align='center'
             color='primary'
           >
-            DESIGN SERVICES
+            <Box fontWeight="fontWeightLight">
+              DESIGN SERVICES
+            </Box>
           </Typography>
-          { services.map((service) => (
-            <Typography variant='body1' key={ service }
+          <Typography variant='h5' 
             align='center' color='secondary'>
-            { service }
+            <Box fontWeight={500}>
+              { services.join(' / ') }
+            </Box> 
           </Typography>
-          ))}
         </Grid>
         <Grid item xs={6}>
           <Typography 
-            variant='h6'
-            component='h6'
+            variant='h5'
+            component='h5'
             gutterBottom
             align='center'
             color='primary'
           >
-            TOOLS I USE
+            <Box fontWeight="fontWeightLight">
+              TOOLS I USE
+            </Box>
           </Typography>
-          { tools.map((tool) => (
-            <Typography variant='body1' key={ tool }
-              align='center' color='secondary'>
-              { tool }
-            </Typography>
-          ))}
+          <Typography variant='h5'
+            align='center' color='secondary'>
+              <Box fontWeight={500}>
+              { tools.join(' / ') }
+            </Box>
+          </Typography>
         </Grid>
       </Grid>
     </Grid>

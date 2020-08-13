@@ -3,7 +3,7 @@ import { ThemeProvider } from '@material-ui/core/styles'
 import CssBaseline from '@material-ui/core/CssBaseline'
 import theme from './theme'
 
-
+import Container from '@material-ui/core/Container'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import Bio from './components/bio/Bio'
@@ -55,7 +55,7 @@ const useStylesApp = makeStyles(theme => ({
     backgroundAttachment: 'fixed',
     ////////////
     width: '100%',
-    height: 1300,
+    height: 2300,
     top: 2000,
     backgroundImage: `url('${ BioBackground }')`
   },
@@ -76,13 +76,15 @@ const App = () => {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <Navbar />
-        <div className={ classes.landingStyle } id='landing' data-aos='fade-up' data-aos-offset='0' />
-        <Landing />
-        <div className={ classes.portfolioStyle } id='portfolio' data-aos='fade-up' data-aos-offset='200' />
-        <Portfolio />
-        <div className={ classes.bioStyle } id='bio' data-aos='fade-up' data-aos-offset='200' />
-        <Bio/>
-        <Lets/>
+        <Container maxWidth='lg'>
+          <div className={ classes.landingStyle } id='landing' data-aos='fade-up' data-aos-offset='0' />
+          <Landing />
+          <div className={ classes.portfolioStyle } id='portfolio' data-aos='fade-up' data-aos-offset='200' />
+          <Portfolio />
+          <div className={ classes.bioStyle } id='bio' data-aos='fade-up' data-aos-offset='200' />
+          <Bio/>
+          <Lets/>
+        </Container>
       </ThemeProvider>
     </div>
   )
