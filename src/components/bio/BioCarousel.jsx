@@ -27,6 +27,17 @@ const useStyles = makeStyles(theme => ({
     width: '100%',
     overflow: 'hidden',
     maxWidth:'1040px'
+  },
+  selector:{
+    paddingLeft: '10px',
+    paddingRight: '10px',
+    '& button': {
+      color: '#878a8f',
+      backgroundColor: 'white',
+      border: '2px solid #878a8f',
+      borderRadius: '50%',
+      fontSize: '1.25rem',
+    }
   }
 }))
 
@@ -63,14 +74,12 @@ function SampleDots(props) {
   const { dots } = props
   return (
     <div style={{ textAlign: 'center' }}>
-      <ul>
       { dots.map((item, index) => (
-          <li key={index} style={{display: 'inline'}}>
+          <li key={index} style={{display: 'inline'}} className={classes.selector}>
             {item.props.children}
           </li>
         ))
       }
-      </ul>
     </div>
   )
 }
