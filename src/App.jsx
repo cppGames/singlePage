@@ -10,7 +10,7 @@ import Bio from './components/bio/Bio'
 import Navbar from './components/Navbar'
 import Landing from './components/landing/Landing'
 import Portfolio from './components/portfolio/Portfolio'
-import Lets from './components/callToAction/Lets'
+import Action from './components/action/Action'
 import { makeStyles } from '@material-ui/core/styles'
 import LandingBackground from '../resource/img/landingBackground.png'
 import PortfolioBackground from '../resource/img/portfolioBackground.png'
@@ -83,7 +83,8 @@ const App = () => {
           <Portfolio />
           <div className={ classes.bioStyle } id='bio' data-aos='fade-up' data-aos-offset='200' />
           <Bio/>
-          <Lets/>
+          <div id='email' data-aos='fade-up' data-aos-offset='200' />
+          <Action />
         </Container>
       </ThemeProvider>
     </div>

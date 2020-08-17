@@ -91,6 +91,19 @@ const Navbar = () => {
             About
           </Link>
         </Grid>
+        <Grid item>
+          <Link
+            activeClass='active-link'
+            to='email'
+            spy={true}
+            smooth={true}
+            offset={0}
+            duration= {500}
+            className = { classes.link }
+          >
+            Email
+          </Link>
+        </Grid>
       </Grid>
     </Grid>
   )
