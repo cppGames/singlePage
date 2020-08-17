@@ -7,6 +7,7 @@ import {
  } from '@material-ui/core/'
 
 
+
 const useStyles = makeStyles({
   card: {
     height: 830,
@@ -82,13 +83,14 @@ const useStyles = makeStyles({
 });
 
 export default function PortfolioEffect(props) {
-  const { num, name, descr } = props
+  const { num, name, descr, img } = props
   const classes = useStyles();
   const bull = <span className={classes.bullet}>•</span>;
 
   return (
     <Card className={classes.card}>
-      <img src="https://images.unsplash.com/photo-1527769929977-c341ee9f2033?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"></img>
+      <img src={ img } alt='' />
+      
       <div className={'info'} classes='test'>
         <Typography variant="h5" component="h2">
           { name }
@@ -105,10 +107,12 @@ PortfolioEffect.propTypes = {
   num: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
   descr: PropTypes.string.isRequired,
+  img: PropTypes.string
 }
 
 PortfolioEffect.defaultProps = {
   num: 0,
   name: 'project name',
-  descr: 'project description'
+  descr: 'project description',
+  img: '',
 }

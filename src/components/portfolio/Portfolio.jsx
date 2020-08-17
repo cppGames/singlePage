@@ -53,7 +53,7 @@ const Portfolio = () => {
           {
             projects.map( (project, i) => ( 
               <Grid item key={i} lg={6} md={6} sm={6} xs={12}>
-                <PortfolioSection num={++i} name={project.name} descr={project.description} />
+                <PortfolioSection num={++i} name={project.name} descr={project.description} img={project.img}/>
               </Grid>
             ))
           }
@@ -86,7 +86,7 @@ const Portfolio = () => {
           {
             selfProjects.map( (selfProject, i) => ( 
               <Grid item key={i} lg={6} md={6} sm={6} xs={12}>
-                <PortfolioSection num={++i} name={selfProject.name} descr={selfProject.description}/>
+                <PortfolioSection num={++i} name={selfProject.name} descr={selfProject.description} img={selfProject.img}/>
               </Grid>
             ))
           }
