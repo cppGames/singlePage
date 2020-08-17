@@ -4,17 +4,18 @@ import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import {
   Box,
-  Grid,
-  Paper,
   Typography,
 } from '@material-ui/core'
+
+import ActionButton from './ActionButton'
+
 
 const useStylesLets = makeStyles(theme => ({
   root: {
     position: 'relative',
     zIndex: 1,
     // paddingTop: theme.spacing(16),
-    // paddingBottom: theme.spacing(16),
+    paddingBottom: theme.spacing(16),
   },
   paper: {
     width: '100%',
@@ -26,25 +27,29 @@ const useStylesLets = makeStyles(theme => ({
     }
   },
   text: {
-    paddingTop: theme.spacing(8),
+    paddingTop: theme.spacing(2),
+    paddingBottom: theme.spacing(2),
   }
 }))
 
-const Lets = (props) => {
+const Action = (props) => {
   const classes = useStylesLets()
+
+  const onClick = () => {
+    window.location.href = `mailto:tikhomirov.artem.i@gmail.com`;
+  }
 
   return (
     <div className={ classes.root }>
-      <Paper className={ classes.paper } elevation={0}>
+      <ActionButton onClick={ onClick }>
         <Typography className={ classes.text } variant='h1' component='h1' align='center'>
           <Box fontWeight="fontWeightBold">
-          L &#x270c;
-          {/* Let’s work together &#x270c; */}
+            Let’s work together &#x270c;
           </Box>
         </Typography>
-      </Paper>
+      </ActionButton>
     </div>
   )
 } 
 
-export default Lets
+export default Action
