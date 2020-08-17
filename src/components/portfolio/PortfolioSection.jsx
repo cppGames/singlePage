@@ -27,7 +27,7 @@ const useStyles = makeStyles({
       display: 'block',
       width: '100%',
       height: '100%',
-      background: 'linear-gradient(to bottom, rgba(255,255,255,0.5), rgba(242,242,242,1))',
+      background: 'linear-gradient(to bottom, rgba(242,242,242,1), rgba(255,255,255,0.5))',
       zIndex: 2,
       transition: '0.5s all',
       opacity: 0
@@ -39,7 +39,7 @@ const useStyles = makeStyles({
       position: 'relative',
       zIndex: 3,
       opacity: 1,
-      transform: 'translateY(80%)',
+      transform: 'translateY(90%)',
       transition: '0.5s all'
     },
     '&:hover .info': {
@@ -57,15 +57,15 @@ const useStyles = makeStyles({
     '& .info h2': {
       marginTop: '30px',
       marginLeft: '16px',
-      marginGirght: '16px',
+      marginRight: '16px',
     },
     '& .info p': {
       letterSpacing: '1px',
       fontSize: '15px',
-      marginTop: '16px',
+      marginTop: '48px',
       marginBottom: '20px',
       marginLeft: '16px',
-      marginGirght: '16px',
+      marginRight: '16px',
     }
   },
   
@@ -91,11 +91,11 @@ export default function PortfolioEffect(props) {
     <Card className={classes.card}>
       <img src={ img } alt='' />
       
-      <div className={'info'} classes='test'>
-        <Typography variant="h5" component="h2">
+      <div className={'info'}>
+        <Typography variant='h5' component='h2'>
           { name }
         </Typography>
-        <Typography variant="body2" component="p" className={classes.face2}>
+        <Typography variant='body2' component='p'>
             { descr }
         </Typography>
       </div>
