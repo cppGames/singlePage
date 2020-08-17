@@ -3,7 +3,6 @@ import { makeStyles } from '@material-ui/core/styles'
 import PortfolioSection from './PortfolioSection'
 import { projects, selfProjects } from './projects'
 import { 
-  Box,
   Grid,
   Typography
 } from '@material-ui/core'
@@ -47,17 +46,15 @@ const Portfolio = () => {
         <Grid 
           item
           container
-          direction='column'
+          direction='row'
           justify='center'
           spacing={2}
         >
           {
-            projects.map( (project, i) => (
-            <Grid container item key={i} direction='row' justify={(i % 2 == 0) ? 'flex-end' : 'flex-start'}>
-              <Grid item lg={8} md={7} sm={6} xs={12}>
+            projects.map( (project, i) => ( 
+              <Grid item key={i} lg={6} md={6} sm={6} xs={12}>
                 <PortfolioSection num={++i} name={project.name} descr={project.description} />
               </Grid>
-            </Grid>
             ))
           }
         </Grid>
@@ -82,17 +79,15 @@ const Portfolio = () => {
         <Grid 
           item
           container
-          direction='column'
+          direction='row'
           justify='center'
           spacing={2}
         >
           {
-            selfProjects.map( (selfProject, i) => (
-            <Grid container item key={i} direction='row' justify={(i % 2 == 0) ? 'flex-end' : 'flex-start'}>
-              <Grid item lg={8} md={7} sm={6} xs={12}>
-                <PortfolioSection num={++i} name={selfProject.name} descr={selfProject.description} />
+            selfProjects.map( (selfProject, i) => ( 
+              <Grid item key={i} lg={6} md={6} sm={6} xs={12}>
+                <PortfolioSection num={++i} name={selfProject.name} descr={selfProject.description}/>
               </Grid>
-            </Grid>
             ))
           }
         </Grid>
