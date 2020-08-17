@@ -20,7 +20,8 @@ const useStylesPreloader = makeStyles(theme => ({
       display: 'inline-block',
       color: '#fff',
       textTransform: 'uppercase',
-      animation: '$animate 1s ease-in-out infinite'
+      animation: '$animate 1s ease-in-out infinite',
+      animationDelay: `calc(0.1s *  var(--i))`
     }
     // affect children styles
     // '&.active'
@@ -31,7 +32,10 @@ const useStylesPreloader = makeStyles(theme => ({
       transform: 'translateY(8px)',
     },
     '20%': {
-      transform: 'translateY(28px)',
+      transform: 'translateY(20px)',
+    },
+    '40%': {
+      transform: 'translateY(0px)',
     },
   }
   
@@ -43,17 +47,17 @@ const Preloader = () => {
   return(
     <div className={classes.root}>
       <div className={classes.wavy}>
-        <span>L</span>
-        <span>o</span>
-        <span>a</span>
-        <span>d</span>
-        <span>i</span>
-        <span>n</span>
-        <span>i</span>
-        <span>g</span>
-        <span>.</span>
-        <span>.</span>
-        <span>.</span>
+        <span style={{'--i':1}}>L</span>
+        <span style={{'--i':2}}>o</span>
+        <span style={{'--i':3}}>a</span>
+        <span style={{'--i':4}}>d</span>
+        <span style={{'--i':5}}>i</span>
+        <span style={{'--i':6}}>n</span>
+        <span style={{'--i':7}}>i</span>
+        <span style={{'--i':8}}>g</span>
+        <span style={{'--i':9}}>.</span>
+        <span style={{'--i':10}}>.</span>
+        <span style={{'--i':11}}>.</span>
       </div>
     </div>
   )
