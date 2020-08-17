@@ -2,11 +2,25 @@ import { createMuiTheme }  from '@material-ui/core/styles'
 
 const theme = createMuiTheme({
   spacing: 8,
+  palette: {
+    primary: {
+      light: '#0f141e',
+      main: '#0f141e',
+      dark: '#0f141e',
+      contrastText: '#0f141e',
+    },
+    secondary: {
+      light: '#878a8f',
+      main: '#878a8f',
+      dark: '#878a8f',
+      contrastText: '#000',
+    },
+  },
   page: {
     minHeight: '100vh',
   },
   content: {
-    padding: '40px',
+    // padding: '40px',
     minHeight: '100vh',
     position: 'relative',
     zIndex: 1,
@@ -20,20 +34,6 @@ const theme = createMuiTheme({
     backgroundRepeat: 'no-repeat',
     backgroundAttachment: 'fixed',
   },
-  palette: {
-    primary: {
-      light: '#757ce8',
-      main: '#0195ac',
-      dark: '#002884',
-      contrastText: '#fff',
-    },
-    secondary: {
-      light: '#ff7961',
-      main: '#f44336',
-      dark: '#ba000d',
-      contrastText: '#000',
-    }
-  }
 })
 
 export default theme
