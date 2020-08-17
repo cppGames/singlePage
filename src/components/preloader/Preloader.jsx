@@ -7,10 +7,14 @@ const useStylesPreloader = makeStyles(theme => ({
     overflowX: 'hidden !important',
     minHeight: '98vh',
     fontFamily: 'consolas',
-    backgroundColor: 'aquamarine',
+    backgroundColor: 'cadetblue',
+    textAlign: 'center',
   },
   wavy: {
-    position: 'relative',
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    
     // mirrow
     '-webkit-box-reflect': 'below -12px linear-gradient(transparent, rgba(0,0,0,0.2))',
     // affect children element
